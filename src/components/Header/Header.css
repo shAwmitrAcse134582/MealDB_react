@@ -1,0 +1,20 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: navy;
+}
+.left{
+    color: aliceblue;
+    margin-left: 10px;
+}
+.right a{
+    text-decoration: none;
+    margin-right: 20px;
+    color:white;
+   
+}
+
+.right a:hover{
+    color: coral;
+}

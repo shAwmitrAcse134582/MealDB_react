@@ -1,0 +1,28 @@
+.meal-details{
+   height: 430px;
+   width:290px ;
+   display: flex;
+   flex-direction: column;
+   border: 1px solid black;
+   
+}
+
+.meal-details img{
+    height: 286px;
+    width: 286px;
+}
+.meal-id{
+    font-family: Lato;
+}
+
+.meal-info{
+    margin-left: 5px;
+}
+.btn{
+    background-color: chocolate;
+    padding: 5px;
+    color: aliceblue;
+}
+.btn:hover{
+    background-color:darkgoldenrod;
+}
