@@ -3,6 +3,8 @@
     justify-content: space-between;
     align-items: center;
     background-color: navy;
+    position: sticky;
+    top: 0;
 }
 .left{
     color: aliceblue;

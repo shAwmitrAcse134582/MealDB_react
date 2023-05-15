@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import './Body.css';
 import Meal from '../Meal/Meal';
+import { addTodb } from '../../utilities/fakedb';
+import Item from '../Item/Item';
 
 const Body = () => {
     const[meals,setMeals]=useState([]);
@@ -18,6 +20,7 @@ const Body = () => {
         // console.log(meal);
         const newItem=[...item,meal];
         setItem(newItem);
+        addTodb(meal);
       }
 
     return (
@@ -34,8 +37,7 @@ const Body = () => {
             </div>
 
             < div className='order'>
-                <h1>order section</h1>
-                <h3>Selected Item:{item.length}</h3>
+                <Item item={item}></Item>
             </div>
 
         </div>
