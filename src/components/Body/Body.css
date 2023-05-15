@@ -2,15 +2,20 @@
     display: grid;
     grid-template-columns: 4fr 1fr;
     margin: 20px;
+    /* position: relative;
+    bottom: 0px; */
 }
 
 .meal{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 35px;
+    margin-bottom: 35px;
+   
     
 }
 .order{
     background-color: bisque;
     text-align: center;
+    /* position: absolute; */
 }
