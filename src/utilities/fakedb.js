@@ -28,4 +28,17 @@ const addTodb=meal=>{
     
 }
 
-export {addTodb}
+const getStoredItem=()=>{
+    let foodItem;
+    const storedItem=localStorage.getItem('food-Item');
+    if(storedItem){
+        foodItem=JSON.parse(storedItem);
+    }
+    return foodItem;
+}
+
+export {
+    
+    addTodb,
+    getStoredItem,
+}

@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import './Body.css';
 import Meal from '../Meal/Meal';
-import { addTodb } from '../../utilities/fakedb';
+import { addTodb, getStoredItem } from '../../utilities/fakedb';
 import Item from '../Item/Item';
 
 const Body = () => {
-    const[meals,setMeals]=useState([]);
+    const[meals,setMeals]=useState({});
 
     const [item,setItem]=useState([]);
 
@@ -15,6 +15,24 @@ const Body = () => {
         .then(data=>setMeals(data));
 
     },[])
+
+    useEffect(()=>{
+      const stroredItem=getStoredItem();
+      const savedItem=[];
+     
+        for(const id in stroredItem){
+          // console.log(id);
+          const addedItem=meals?.meals?.find(meal=>meal.id===id)
+          if(addedItem){
+            const quantity=stroredItem[id];
+            addedItem.quantity=quantity;
+            savedItem.push(addedItem);
+          }
+        }
+      
+      
+      setItem(savedItem);
+    },[meals])
 
     const btnclk=(meal)=>{
         // console.log(meal);
